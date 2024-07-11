@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- Tailwind CSS -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <title>Fake News Detection</title>
+</head>
+
+<body class="bg-gray-200">
+    <section class="text-gray-600 body-font -my-8">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-20">
+                
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Fake News Detection</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Detect fake news with our advanced machine
+                    learning model. Enter a news headline below to get started.</p>
+                <br>
+                <p class="text-primary"><b>{{prediction_text}}</b></p>
+            </div>
+            <div class="flex justify-center">
+                <form action="/prediction" method="POST" class="w-full max-w-lg">
+                    <div class="mb-4">
+                        <label for="news" class="block text-gray-700 text-sm font-bold mb-2">Enter news headline</label>
+                        <input type="text" id="news" name="news"
+                            class="w-full border rounded py-2 px-4 focus:outline-none focus:border-green-500 border-gray-300 focus:border-green-500 focus:bg-white focus:ring-2 focus:ring-green-200"
+                            aria-describedby="newsHelp" required>
+                        <div id="newsHelp" class="text-gray-500 text-xs mt-1">We'll never share your email with anyone
+                            else.</div>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 focus:outline-none focus:bg-green-600">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+        integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+        crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
